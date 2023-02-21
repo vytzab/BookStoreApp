@@ -1,0 +1,3 @@
+install SQL Express server
+install Visual Studio 2022
+nuGet packages []
