@@ -1,5 +1,4 @@
 ﻿using Blazored.LocalStorage;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using System.Net.Http.Headers;
 
 namespace BookStoreApp.Blazor.Server.UI.Services.Base
@@ -8,7 +7,8 @@ namespace BookStoreApp.Blazor.Server.UI.Services.Base
     {
         private readonly IClient client;
         private readonly ILocalStorageService localStorage;
-        public BaseHttpService(IClient client, ILocalStorageService localStorage) 
+
+        public BaseHttpService(IClient client, ILocalStorageService localStorage)
         {
             this.client = client;
             this.localStorage = localStorage;

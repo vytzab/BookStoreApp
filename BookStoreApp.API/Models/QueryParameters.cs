@@ -1,4 +1,4 @@
-﻿namespace BookStoreApp.Blazor.WebAssembly.UI.Models
+﻿namespace BookStoreApp.API.Models
 {
     public class QueryParameters
     {
