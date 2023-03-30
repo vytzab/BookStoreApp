@@ -16,7 +16,7 @@ namespace BookStoreApp.Blazor.WebAssembly.UI.Services.Base
 
         protected Response<Guid> ConvertApiExceptions<Guid>(ApiException apiException)
         {
-            if(apiException.StatusCode == 400)
+            if (apiException.StatusCode == 400)
             {
                 return new Response<Guid>() { Message = "Validation errors have occured.", ValidationErrors = apiException.Response, Success = false };
             }
@@ -24,8 +24,12 @@ namespace BookStoreApp.Blazor.WebAssembly.UI.Services.Base
             {
                 return new Response<Guid>() { Message = "The requested item could not be found.", Success = false };
             }
+            if (apiException.StatusCode == 401)
+            {
+                return new Response<Guid>() { Message = "Invalid credentials, please try again.", Success = false };
+            }
 
-            if(apiException.StatusCode >= 200 && apiException.StatusCode <= 299)
+            if (apiException.StatusCode >= 200 && apiException.StatusCode <= 299)
             {
                 return new Response<Guid>() { Message = "Operation Reported Success", Success = true };
             }
