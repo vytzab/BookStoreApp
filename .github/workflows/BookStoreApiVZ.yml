@@ -1,13 +1,13 @@
-name: Build and deploy .NET Core application to Web App BookStoreAppAPIVytZab
+name: Build and deploy .NET Core application to Web App BookStoreApiVZ
 on:
   push:
     branches:
     - master
 env:
-  AZURE_WEBAPP_NAME: BookStoreAppAPIVytZab
+  AZURE_WEBAPP_NAME: BookStoreApiVZ
   AZURE_WEBAPP_PACKAGE_PATH: BookStoreApp.API\publish
   CONFIGURATION: Release
-  DOTNET_CORE_VERSION: 7.0.x
+  DOTNET_CORE_VERSION: 6.0.x
   WORKING_DIRECTORY: BookStoreApp.API
 jobs:
   build:
@@ -44,5 +44,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.BookStoreAppAPIVytZab_9FAF }}
+        publish-profile: ${{ secrets.BookStoreApiVZ_C76B }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}

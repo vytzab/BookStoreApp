@@ -2,7 +2,7 @@
   "dependencies": {
     "mssql1": {
       "secretStore": "AzureAppSettings",
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/vytzabbookstoredb/databases/BookStoreDb",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/bookstoredbdbservervz/databases/BookStoreDB",
       "type": "mssql.azure",
       "connectionId": "ConnectionStrings:BookStoreAppDbConnection",
       "dynamicId": null
